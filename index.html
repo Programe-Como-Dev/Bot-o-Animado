@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Botão Animado</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: black;
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .container {
+        text-align: center;
+        color: white;
+      }
+
+      .animated-button {
+        padding: 15px 40px;
+        font-size: 24px;
+        background: linear-gradient(45deg, #ff416c, #ff4b3b);
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        transition: all 0.3s ease;
+        animation: pulse 2s infinite;
+        box-shadow: 0 0 20px rgba(255, 75, 43, 0.5);
+      }
+
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+          box-shadow: 0 0 20px rgba(255, 75, 43, 0.5);
+        }
+        50% {
+          transform: scale(1.1);
+          box-shadow: rgba(255, 75, 43, 0.7);
+        }
+        100% {
+          transform: scale(1);
+          box-shadow: rgba(255, 75, 43, 0.5);
+        }
+      }
+
+      .animated-button:hover {
+        background: linear-gradient(45deg, #ff4b3b, #ff416c);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="animated-button">Inscreva-se!</div>
+    </div>
+  </body>
+</html>
